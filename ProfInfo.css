@@ -53,6 +53,7 @@ button:disabled {
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-inline: auto;
 }
 .buttons {
     gap: 50px;
