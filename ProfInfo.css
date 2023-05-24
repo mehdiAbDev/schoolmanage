@@ -3,6 +3,7 @@
     src: url(Cairo-VariableFont_slnt\,wght.ttf);
 }
 .Info {
+    user-select: none;
     max-width: 400px;
     margin: 0 auto;
     height: fit-content;
