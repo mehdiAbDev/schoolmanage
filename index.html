@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Création du l'emploi du temps individual</title>
+        <link rel="stylesheet" href="ProfInfo.css">
+    </head>
+
+    <body>
+        <caption class="topTitle">
+            <p>Affichage du l'emploi du temps global</p>
+        </caption>
+        <div class="container">
+            <section class="Info">
+                <form action="ProfInfo.php" method="post">
+                    <label for="department">Faculté:</label>
+                    <select name="Faculty" id="Groupe">
+                        <option selected="selected" value="Faculté science exacte et informatique">Faculté science exacte et informatique</option>
+                        <option value="Faculté des sciences naturelles et de la vie">Faculté des sciences naturelles et de la vie</option>
+                        <option value="Faculté des sciences sociales et humaines">Faculté des sciences sociales et humaines</option>
+                        <option value="Faculté des lettres et des arts">Faculté des lettres et des arts</option>
+                        <option value="Facultédes langues étrangères">Faculté des langues étrangères</option>
+                        <option value="Faculté de génie civil et architectural">Faculté de génie civil et architectural</option>
+                        <option value="L'Institut de l'éducation physique et des sports">L'Institut de l'éducation physique et des sports</option>
+                    </select>
+
+                    <label for="college">Département:</label>
+                    <select name="Departement" id="Groupe">
+                        <option selected="selected" value="Département Informatique">Département Informatique</option>
+                        <option value="Département de Mathématiques">Département de Mathématiques</option>
+                        <option value="Département de Physique">Département de Physique</option>
+                        <option value="le Département de Chimie">le Département de Chimie</option>
+                        <option
+                            value="Département du tronc commun en sciences naturelles et du vivant Direction de l'eau, de l'environnement et du développement durable">Département
+                            du tronc commun en sciences naturelles et du vivant Direction de l'eau, de
+                            l'environnement et du développement durable</option>
+                        <option value="Département des Sciences Agronomiques et de la Biotechnologie">Département des Sciences Agronomiques et de la Biotechnologie</option>
+                        <option value="Département de Biologie">Département de Biologie</option>
+                        <option value="Département des sciences humaines">Département des sciences humaines</option>
+                        <option value="Département des sciences sociales">Département des sciences sociales</option>
+                        <option value="Département de littérature arabe">Département de littérature arabe</option>
+                        <option value="Département de langue arabe">Département de langue arabe</option>
+                        <option value="Département de langue française">Département de langue française</option>
+                        <option value="Département de Langue Anglaise">Département de Langue Anglaise</option>
+                        <option value="Département d'Architecture">Département d'Architecture</option>
+                        <option value="Département des sciences de l'eau">Département des sciences de l'eau</option>
+                        <option value="Département de génie civil">Département de génie civil</option>
+                    </select>
+
+                    <label for="semester">Semester:</label>
+                    <select name="semester" id="Groupe">
+                        <option selected="selected" value="S1">S1</option>
+                        <option value="S2">S2</option>
+                        <option value="S3">S3</option>
+                        <option value="S4">S4</option>
+                        <option value="S5">S5</option>
+                        <option value="S6">S6</option>
+                    </select>
+
+                    <label for="Année scolaire">Année scolaire</label>
+                    <select name="Année scolaire" id="Année scolaire">
+                        <option selected="selected" value="2022/2023"></option>
+                        <option value="2021/2022">2021/2022</option>
+                        <option value="2020/2021">2020/2021</option>
+                        <option value="2019/2020">2019/2020</option>
+                        <option value="2018/2019">2018/2019</option>
+                        <option value="2017/2018">2017/2018</option>
+                    </select>
+
+                    <label for="Type">Type</label>
+                    <select name="Type" id="Type">
+                        <option selected="selected" value="vacataire">vacataire</option>
+                        <option value="permanent">permanent</option>
+                    </select>
+
+                    <label for="Gender">Gender</label>
+                    <select name="Gender" id="Gender">
+                        <option selected="selected" value="Femme">Femme</option>
+                        <option value="Homme">Homme</option>
+                    </select>
+
+                    <label for="Nom Enseignant">Nom Enseignant</label>
+                    <select name="Nom Enseignant" id="Nom Enseignant">
+                        <option selected="selected" value="Harbouch">Harbouch</option>
+                        <option value="Belkadi">Belkadi</option>
+                        <option value="Boussahba">Boussahba</option>
+                        <option value="Mazzoudj">Mazzoudj</option>
+                        <option value="Gallil">Gallil</option>
+                        <option value="Bechar">Bechar</option>
+                    </select>
+
+                    <label for="Prenom Enseignant">Prenom Enseignant</label>
+                    <select name="Prenom Enseignant" id="Prenom Enseignant">
+                        <option selected="selected" value="Ahmed">Ahmed</option>
+                        <option value="khadidja">khadidja</option>
+                        <option value="Nassima">Nassima</option>
+                        <option value="Fraiha">Fraiha</option>
+                        <option value="Mohammed">Mohammed</option>
+                        <option value="Rachid">Rachid</option>
+                    </select>
+
+                    <label for="Enseignement affecté">Enseignement affecté</label>
+                    <select name="Enseignement affecté" id="Enseignement affecté">
+                        <option selected="selected" value="Cours">cours</option>
+                        <option value="TD">TD</option>
+                        <option value="TP">TP</option>
+                    </select>
+                </form>
+
+            </section>
+            
+
+            <div id="tab">
+                <table>
+
+                    <tr>
+                        <th>
+                            <h2>Les Jours</h2>
+                        </th>
+                        <th>
+                            <h2>1<sup>er</sup>
+                                Séance</h2>
+                        </th>
+                        <th>
+                            <h2>2<sup>ème</sup>
+                                Séance</h2>
+                        </th>
+                        <th>
+                            <h2>3<sup>ème</sup>
+                                Séance</h2>
+                        </th>
+                        <th>
+                            <h2>4<sup>ème</sup>
+                                Séance</h2>
+                        </th>
+                        <th>
+                            <h2>5<sup>ème</sup>
+                                Séance</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <div class="buttons">
+                            <section>
+                                <button class="delete">Supprimer</button>
+                            </section>
+                            <section>
+                                <button class="edit">Modifier</button>
+                            </section>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Dimanche</h2>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Lundi</h2>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Mardi
+                            </h2>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Mercredi</h2>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Jeudi</h2>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                        <td>
+                            <div class="select">
+                                <select name="format" id="format">
+                                    <option selected="selected" disabled="disabled">Matière</option>
+                                    <option value="SE">SE</option>
+                                    <option value="BDD">BDD</option>
+                                    <option value="THL">THL</option>
+                                    <option value="SI">SI</option>
+                                    <option value="ARCHI">ARCHI</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="salle" id="salle">
+                                    <option selected="selected" disabled="disabled">Salle</option>
+                                    <option value="STD1">STD1</option>
+                                    <option value="STP4">STP4</option>
+                                    <option value="STP1">STP1</option>
+                                    <option value="AmphiF">AmphiF</option>
+                                    <option value="STD6">STD6</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="groupe" id="groupe">
+                                    <option selected="selected" disabled="disabled">Groupe</option>
+                                    <option value="Groupe1">Groupe1</option>
+                                    <option value="Groupe2">Groupe2</option>
+                                    <option value="Groupe3">Groupe3</option>
+                                    <option value="Groupe4">Groupe4</option>
+                                    <option value="Groupe5">Groupe5</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select name="niveau" id="niveau">
+                                    <option selected="selected" disabled="disabled">Niveau</option>
+                                    <option value="L1">L1</option>
+                                    <option value="L2">L2</option>
+                                    <option value="L3">L3</option>
+                                    <option value="M1">M1</option>
+                                    <option value="M2">M2</option>
+                                </select>
+                            </div>
+                            <button>Valider</button>
+                        </td>
+                    </tr>
+
+                    <!-- Add more rows for other days -->
+                </table>
+            </div>
+
+        </div>
+
+    </html>
+
+</body>
+
+</html>
